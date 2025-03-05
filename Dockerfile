@@ -1,29 +1,9 @@
-# Use the official Jupyter base image
-FROM jupyter/base-notebook:latest
+FROM python:3.12
 
-# Set the working directory in the container
-WORKDIR /home/jovyan/work
+  RUN apt-get update &
 
-# Copy the requirements file into the container
-COPY requirements.txt .
+  RUN pip install --upgrade pip
 
-# Install the required Python packages
-RUN pip install --no-cache-dir -r requirements.txt
+  COPY requirements_fig4figs6figs7.txt .
 
-# Copy the Jupyter Notebook into the container
-COPY HTLV_final.ipynb .
-
-# Expose the default Jupyter port
-EXPOSE 8888
-
-# Start JupyterLab
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
-
-
-
-
-
-
-
-
-
+  RUN pip install -r requirements_fig4figs6figs7.txt
