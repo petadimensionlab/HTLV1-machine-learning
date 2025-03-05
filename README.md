@@ -1,4 +1,4 @@
-## All codes and materials
+# All codes and materials
 
 1. Install Docker:
 	•	Download and install Docker Desktop from the official website.
@@ -14,7 +14,7 @@
 
 	•	After running the container, note the URL with the token provided in the terminal output. Open this URL in a web browser to access the Jupyter notebook. From the panel bar on the left access the file.
 
- # Source code for Figure 4, Supplementary Figure S6 S7
+ ## Source code for Figure 4, Supplementary Figure S6 S7
 
 This code is most aimed for docker use (the code was only checked for Docker version 24.0.6 and 27.3.1).
 
